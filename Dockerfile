@@ -22,6 +22,7 @@ RUN \
         python2 \
 	libgcc \
 	libstdc++ \
+	setuptools \
 	geoip \
 	p7zip \
 	unrar \
@@ -66,9 +67,9 @@ RUN \
  apk del --purge \
 	build-dependencies && \
  rm -rf \
-	/root/.cache
- #rm -rf \
- #       /tmp/*
+	/root/.cache && \
+ rm -rf \
+        /tmp/*
 
 # add local files
 COPY root/ /
