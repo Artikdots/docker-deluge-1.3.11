@@ -57,15 +57,15 @@ RUN \
  tar -xvzf deluge-1.3.11.tar.gz && \
  cd /tmp/deluge-1.3.11 && \
  python2 setup.py build && \
- python2 setup.py install && \
+ python2 setup.py install --prefix=/usr && \
 
 # cleanup
  apk del --purge \
 	build-dependencies && \
  rm -rf \
-	/root/.cache && \
- rm -rf \
-        /tmp/*
+	/root/.cache
+ #rm -rf \
+ #       /tmp/*
 
 # add local files
 COPY root/ /
