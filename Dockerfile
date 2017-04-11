@@ -22,7 +22,6 @@ RUN \
         python2 \
 	libgcc \
 	libstdc++ \
-	setuptools \
 	geoip \
 	p7zip \
 	unrar \
@@ -49,6 +48,7 @@ RUN \
 	crypto \
 	mako \
 	markupsafe \
+	setuptools \
 	pyopenssl \
 	service_identity \
 	six \
