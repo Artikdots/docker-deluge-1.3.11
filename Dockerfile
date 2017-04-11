@@ -54,7 +54,7 @@ RUN \
 
 # build/install deluge
  cd /tmp && \
- tar -xvzf deluge.1.3.11.tar.gz && \
+ tar -xvzf deluge-1.3.11.tar.gz && \
  cd /tmp/deluge-1.3.11 && \
  python2 setup.py build && \
  python2 setup.py install && \
