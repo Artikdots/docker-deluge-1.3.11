@@ -23,6 +23,7 @@ RUN \
 	libgcc \
 	libstdc++ \
 	geoip \
+	py2-pip \
 	p7zip \
 	unrar \
 	unzip && \
@@ -48,7 +49,6 @@ RUN \
 	mako \
 	markupsafe \
 	setuptools \
-	py2-pip \
 	pyopenssl \
 	service_identity \
 	six \
