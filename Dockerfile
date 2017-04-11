@@ -12,6 +12,7 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 COPY boost-python-1.56.0-r0.apk /tmp/boost-python-1.56.0-r0.apk
 COPY boost-system-1.56.0-r0.apk /tmp/boost-system-1.56.0-r0.apk
 COPY libtorrent-rasterbar-0.16.18-r2.apk /tmp/libtorrent-rasterbar-0.16.18-r2.apk
+COPY deluge-1.3.11.tar.gz /tmp/deluge-1.3.11.tar.gz
 
 # install runtime packages
 RUN \
@@ -47,12 +48,12 @@ RUN \
 	pyopenssl \
 	service_identity \
 	six \
+	chardet \
 	twisted \
 	zope.interface && \
 
 # build/install deluge
  cd /tmp && \
- wget http://download.deluge-torrent.org/source/deluge-1.3.11.tar.gz && \
  tar -xvzf deluge.1.3.11.tar.gz && \
  cd /tmp/deluge-1.3.11 && \
  python2 setup.py build && \
