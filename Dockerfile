@@ -16,17 +16,21 @@ COPY deluge-1.3.11.tar.gz /tmp/deluge-1.3.11.tar.gz
 
 # install runtime packages
 RUN \
- apk add --allow-untrusted \
-        /tmp/boost-system-1.56.0-r0.apk \
-        /tmp/boost-python-1.56.0-r0.apk \
-        /tmp/libtorrent-rasterbar-0.16.18-r2.apk && \
  apk add --no-cache \
 	ca-certificates \
 	libressl2.4-libssl \
         python2 \
+	libgcc \
+	libstdc++ \
+	libressl2.4-libcrypto
+	geoip
 	p7zip \
 	unrar \
 	unzip && \
+ apk add --allow-untrusted \
+        /tmp/boost-system-1.56.0-r0.apk \
+        /tmp/boost-python-1.56.0-r0.apk \
+        /tmp/libtorrent-rasterbar-0.16.18-r2.apk && \
 
 # install build packages
  apk add --no-cache --virtual=build-dependencies \
