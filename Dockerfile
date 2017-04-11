@@ -22,8 +22,8 @@ RUN \
         python2 \
 	libgcc \
 	libstdc++ \
-	libressl2.4-libcrypto
-	geoip
+	libressl2.4-libcrypto \
+	geoip \
 	p7zip \
 	unrar \
 	unzip && \
