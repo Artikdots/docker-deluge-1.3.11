@@ -18,11 +18,10 @@ COPY deluge-1.3.11.tar.gz /tmp/deluge-1.3.11.tar.gz
 RUN \
  apk add --no-cache \
 	ca-certificates \
-	libressl2.4-libssl \
+	openssl \
         python2 \
 	libgcc \
 	libstdc++ \
-	libressl2.4-libcrypto \
 	geoip \
 	p7zip \
 	unrar \
@@ -37,7 +36,7 @@ RUN \
 	g++ \
 	gcc \
 	libffi-dev \
-	libressl-dev \
+	openssl-dev \
 	py2-pip \
 	python2-dev && \
 
