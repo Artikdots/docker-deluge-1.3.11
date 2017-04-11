@@ -37,7 +37,6 @@ RUN \
 	gcc \
 	libffi-dev \
 	openssl-dev \
-	py2-pip \
 	python2-dev && \
 
 # install pip packages
@@ -49,9 +48,11 @@ RUN \
 	mako \
 	markupsafe \
 	setuptools \
+	py2-pip \
 	pyopenssl \
 	service_identity \
 	six \
+	pyxdg \
 	chardet \
 	twisted \
 	zope.interface && \
