@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.5
+FROM ghcr.io/linuxserver/baseimage-alpine
 MAINTAINER Gonzalo Peci <davyjones@linuxserver.io>, sparklyballs
 
 # environment variables
